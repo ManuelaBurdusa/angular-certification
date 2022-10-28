@@ -1,0 +1,40 @@
+<div class="card row">
+  <div class="col-12">
+    <div class="row card-header">
+      <div class="col-11">
+        <h3>{{currentStock.name}} ({{currentStock.id }})</h3>
+      </div>
+      <div class="col-1">
+        <button type="button" class="btn-close" [id]="'remove' + currentStock.id" aria-label="Close" (click)="removeItem()"></button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-4">
+          Changed today:
+          <span *ngIf="isIncreasing(currentStock.quote.d)">+</span>
+          <span *ngIf="!isIncreasing(currentStock.quote.d)">-</span>
+          {{ currentStock.quote.d | percent }}
+        </div>
+        <div class="col-4">
+          Opening price: {{ currentStock.quote.o | currency }}
+        </div>
+        <div class="col-3">
+          <em *ngIf="isIncreasing(currentStock.quote.d)" class="bi bi-arrow-up">
+          </em>
+          <em *ngIf="!isIncreasing(currentStock.quote.d)" class="bi bi-arrow-down">
+          </em>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          Current Price: {{ currentStock.quote.c | currency }}
+        </div>
+        <div class="col-4">
+          High Price: {{ currentStock.quote.h | currency }}
+        </div>
+      </div>
+    </div>
+  </div>
+<button class="btn btn-primary" [id]="'sentiment' + currentStock.id" (click)="navigateToSentimentDetails()">Go to social sentiment details <em class="bi bi-arrow-right"></em></button>
+</div>

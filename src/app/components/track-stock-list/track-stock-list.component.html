@@ -1,0 +1,4 @@
+<mat-progress-spinner *ngIf="!loadedItems" [mode]="'indeterminate'"></mat-progress-spinner>
+<ng-container *ngIf="this.stocks.length > 0">
+  <app-track-stock-list-item *ngFor="let stock of stocks; i as index" [currentStock]="stock" (removeStock)="removeStock($event)"></app-track-stock-list-item>
+</ng-container>

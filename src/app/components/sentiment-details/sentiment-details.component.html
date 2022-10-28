@@ -1,0 +1,25 @@
+<ng-container *ngIf="trackedHistory">
+<div class="card">
+  <div class="col-12">
+    <h4> {{trackedHistory.company}} ({{trackedHistory.symbol}})</h4>
+  </div>
+  <div class="row">
+  <div *ngFor="let trackedMonth of trackedHistory.sentimentHistory" class="col-4">
+
+      <p>{{getMonthName(trackedMonth.month)}}</p>
+      <p>Change: <span *ngIf="isTrackChangeIncrease(trackedMonth.change)">+</span>
+        {{trackedMonth.change}}<p>
+      <p>MSPR: {{trackedMonth.mspr}}</p>
+
+      <em *ngIf="isTrackChangeIncrease(trackedMonth.change)" class="bi bi-arrow-up">
+      </em>
+      <em *ngIf="!isTrackChangeIncrease(trackedMonth.change)" class="bi bi-arrow-down">
+      </em>
+  </div>
+</div>
+</div>
+<button id="backBtn" class="btn btn-primary" (click)="navigateBack()" >
+  <em class="bi bi-arrow-left"></em>
+  Back to list of stocks
+</button>
+</ng-container>

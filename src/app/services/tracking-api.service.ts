@@ -42,7 +42,7 @@ export class TrackingApiService {
 
   public removeSymbolFromStorage(symbol: string): void {
     const trackedSymbols = this.getSymbolsFromStorage();
-    const trackIndex = trackedSymbols.findIndex(item => item.toLowerCase() === symbol.toLowerCase());
+    const trackIndex = trackedSymbols.findIndex(item => item === symbol);
     trackedSymbols.splice(trackIndex, 1);
     this.localStorageService.setStorageItem(STORAGE_TRACKING_KEY, trackedSymbols);
   }

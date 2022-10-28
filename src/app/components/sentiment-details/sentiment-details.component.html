@@ -11,15 +11,17 @@
         {{trackedMonth.change}}<p>
       <p>MSPR: {{trackedMonth.mspr}}</p>
 
-      <em *ngIf="isTrackChangeIncrease(trackedMonth.change)" class="bi bi-arrow-up">
+      <em *ngIf="isTrackChangeIncrease(trackedMonth.change)" class="icon-up">
+        &#x2191;
       </em>
-      <em *ngIf="!isTrackChangeIncrease(trackedMonth.change)" class="bi bi-arrow-down">
+      <em *ngIf="!isTrackChangeIncrease(trackedMonth.change)"  class="icon-down">
+        &#x2193;
       </em>
   </div>
 </div>
 </div>
 <button id="backBtn" class="btn btn-primary" (click)="navigateBack()" >
-  <em class="bi bi-arrow-left"></em>
-  Back to list of stocks
+  <em></em>
+  &#x2190; Back to list of stocks
 </button>
 </ng-container>

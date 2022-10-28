@@ -20,9 +20,11 @@
           Opening price: {{ currentStock.quote.o | currency }}
         </div>
         <div class="col-3">
-          <em *ngIf="isIncreasing(currentStock.quote.d)" class="bi bi-arrow-up">
+          <em *ngIf="isIncreasing(currentStock.quote.d)"  class="icon-up">
+            &#x2191;
           </em>
-          <em *ngIf="!isIncreasing(currentStock.quote.d)" class="bi bi-arrow-down">
+          <em *ngIf="!isIncreasing(currentStock.quote.d)"  class="icon-down">
+            &#x2193;
           </em>
         </div>
       </div>
@@ -36,5 +38,5 @@
       </div>
     </div>
   </div>
-<button class="btn btn-primary" [id]="'sentiment' + currentStock.id" (click)="navigateToSentimentDetails()">Go to social sentiment details <em class="bi bi-arrow-right"></em></button>
+<button class="btn btn-primary" [id]="'sentiment' + currentStock.id" (click)="navigateToSentimentDetails()">Go to social sentiment details <em class="icon">&#x2192;</em></button>
 </div>

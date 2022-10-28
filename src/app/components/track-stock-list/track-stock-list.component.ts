@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { Stock } from 'src/app/models/Stock';
-import { TrackingApiService } from 'src/app/services/tracking-api.service';
+import { Stock } from '../../models/Stock';
+import { TrackingApiService } from '../../services/tracking-api.service';
 
 @Component({
   selector: 'app-track-stock-list',

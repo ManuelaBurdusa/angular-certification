@@ -2,8 +2,8 @@ import { Location } from '@angular/common';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subject } from 'rxjs';
-import { SentimentTracking } from 'src/app/models/SentimentTracking';
-import { TrackingApiService } from 'src/app/services/tracking-api.service';
+import { SentimentTracking } from '../../models/SentimentTracking';
+import { TrackingApiService } from '../../services/tracking-api.service';
 
 @Component({
   selector: 'app-sentiment-details',

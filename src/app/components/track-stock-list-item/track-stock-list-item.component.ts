@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { Stock } from 'src/app/models/Stock';
-import { TrackingApiService } from 'src/app/services/tracking-api.service';
+import { Stock } from '../../models/Stock';
+import { TrackingApiService } from '../../services/tracking-api.service';
 
 @Component({
   selector: 'app-track-stock-list-item',

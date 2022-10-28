@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, Validators} from '@angular/forms';
-import { Stock } from 'src/app/models/Stock';
-import { TrackingApiService } from 'src/app/services/tracking-api.service';
+import { FormBuilder, Validators} from '@angular/forms';
+import { TrackingApiService } from '../../services/tracking-api.service';
 
 @Component({
   selector: 'app-track-stock',

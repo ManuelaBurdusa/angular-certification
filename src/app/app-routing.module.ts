@@ -4,7 +4,7 @@ import { SentimentDetailsComponent } from './components/sentiment-details/sentim
 import { TrackStockComponent } from './components/track-stock/track-stock.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'track-stock' },
+  // { path: '', pathMatch: 'full', redirectTo: 'track-stock' },
   { path: '', component: TrackStockComponent },
   {path: 'sentiment/:symbol', component: SentimentDetailsComponent},
   { path: '**', component: TrackStockComponent}

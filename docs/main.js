@@ -826,7 +826,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: '', pathMatch: 'full', redirectTo: 'track-stock' },
+    // { path: '', pathMatch: 'full', redirectTo: 'track-stock' },
     { path: '', component: _components_track_stock_track_stock_component__WEBPACK_IMPORTED_MODULE_2__["TrackStockComponent"] },
     { path: 'sentiment/:symbol', component: _components_sentiment_details_sentiment_details_component__WEBPACK_IMPORTED_MODULE_1__["SentimentDetailsComponent"] },
     { path: '**', component: _components_track_stock_track_stock_component__WEBPACK_IMPORTED_MODULE_2__["TrackStockComponent"] }
